@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiDemoApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiDemoApp"
+    Shell.FlyoutBehavior="Disabled"
+    Title="MauiDemoApp">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TabBar">
+                <Setter Property="Shell.TabBarBackgroundColor" Value="LightBlue"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="Black"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="Gray"/>
+            </Style>
+            <Style TargetType="ShellContent">
+                <Setter Property="Shell.BackgroundColor" Value="White"></Setter>
+                
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+    <TabBar>
+        
+        <ShellContent
+    Title="首页" 
+            Icon="/Resources/Images/index.png"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+        
+ 
+        <ShellContent
+    Title="关于"
+    ContentTemplate="{DataTemplate local:AboutPage}"
+    Route="AboutPage" />
+    </TabBar>
+</Shell>
