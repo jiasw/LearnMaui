@@ -72,4 +72,8 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Menu\index.png" />
+	</ItemGroup>
+
 </Project>

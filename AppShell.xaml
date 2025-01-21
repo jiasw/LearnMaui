@@ -16,22 +16,38 @@
             </Style>
             <Style TargetType="ShellContent">
                 <Setter Property="Shell.BackgroundColor" Value="White"></Setter>
-                
+
             </Style>
         </ResourceDictionary>
     </Shell.Resources>
-    <TabBar>
-        
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
         <ShellContent
     Title="首页" 
-            Icon="/Resources/Images/index.png"
+            Icon="/Resources/Images/Menu/index.png"
     ContentTemplate="{DataTemplate local:MainPage}"
     Route="MainPage" />
-        
- 
+
+
         <ShellContent
-    Title="关于"
+    Title="理财"
+            Icon="/Resources/Images/Menu/tool.png"
     ContentTemplate="{DataTemplate local:AboutPage}"
     Route="AboutPage" />
-    </TabBar>
+        <ShellContent
+Title="理财"
+        Icon="/Resources/Images/Menu/tool.png"
+ContentTemplate="{DataTemplate local:AboutPage}"
+Route="AboutPage" />
+       
+        <Tab Title="Domestic"
+     Icon="/Resources/Images/Menu/report.png">
+            <ShellContent Title="报表"
+                  Icon="/Resources/Images/Menu/template.png"
+                  ContentTemplate="{DataTemplate local:MainPage}" />
+            <ShellContent Title="模板"
+                  Icon="/Resources/Images/Menu/tool.png"
+                  ContentTemplate="{DataTemplate local:AboutPage}" />
+        </Tab>
+    </FlyoutItem>
 </Shell>
