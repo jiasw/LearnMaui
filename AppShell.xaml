@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiDemoApp"
+    xmlns:andviews="clr-namespace:MauiDemoApp.Platforms.Android.Page"
     Shell.FlyoutBehavior="Disabled"
     Title="MauiDemoApp">
 
@@ -30,24 +31,25 @@
 
 
         <ShellContent
-    Title="理财"
-            Icon="/Resources/Images/Menu/tool.png"
-    ContentTemplate="{DataTemplate local:AboutPage}"
+    Title="分类"
+            Icon="/Resources/Images/Menu/type.png"
+    ContentTemplate="{DataTemplate andviews:ProductType}"
     Route="AboutPage" />
         <ShellContent
-Title="理财"
+Title="社区"
         Icon="/Resources/Images/Menu/tool.png"
-ContentTemplate="{DataTemplate local:AboutPage}"
+ContentTemplate="{DataTemplate andviews:Community}"
 Route="AboutPage" />
-       
-        <Tab Title="Domestic"
-     Icon="/Resources/Images/Menu/report.png">
-            <ShellContent Title="报表"
-                  Icon="/Resources/Images/Menu/template.png"
-                  ContentTemplate="{DataTemplate local:MainPage}" />
-            <ShellContent Title="模板"
-                  Icon="/Resources/Images/Menu/tool.png"
-                  ContentTemplate="{DataTemplate local:AboutPage}" />
-        </Tab>
+        <ShellContent
+Title="消息"
+        Icon="/Resources/Images/Menu/message.png"
+ContentTemplate="{DataTemplate andviews:Message}"
+Route="AboutPage" />
+        <ShellContent
+Title="我的"
+        Icon="/Resources/Images/Menu/my.png"
+ContentTemplate="{DataTemplate andviews:Profile}"
+Route="AboutPage" />
+
     </FlyoutItem>
 </Shell>

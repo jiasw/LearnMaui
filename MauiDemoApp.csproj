@@ -21,7 +21,7 @@
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>MauiDemoApp</ApplicationTitle>
+		<ApplicationTitle>学习Maui</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.mauidemoapp</ApplicationId>
@@ -29,13 +29,7 @@
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
-
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
-		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -57,7 +51,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\Banner\banner1.jpg" />
+	  <None Remove="Resources\Images\Banner\banner2.jpg" />
+	  <None Remove="Resources\Images\Banner\banner3.jpg" />
+	  <None Remove="Resources\Images\Btn\defaultimg.svg" />
+	  <None Remove="Resources\Images\Btn\notify.png" />
+	  <None Remove="Resources\Images\Btn\scan.png" />
 	  <None Remove="Resources\Images\index.png" />
+	  <None Remove="Resources\Images\Menu\community.png" />
+	  <None Remove="Resources\Images\Menu\message.png" />
+	  <None Remove="Resources\Images\Menu\my.png" />
+	  <None Remove="Resources\Images\Menu\report.png" />
+	  <None Remove="Resources\Images\Menu\template.png" />
+	  <None Remove="Resources\Images\Menu\tool.png" />
+	  <None Remove="Resources\Images\Menu\type.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -70,10 +77,38 @@
 	  <MauiXaml Update="AboutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Platforms\Android\Page\Community.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Platforms\Android\Page\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Platforms\Android\Page\Message.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Platforms\Android\Page\ProductType.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Platforms\Android\Page\Profile.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Banner\banner1.jpg" />
+	  <MauiImage Include="Resources\Images\Banner\banner2.jpg" />
+	  <MauiImage Include="Resources\Images\Banner\banner3.jpg" />
+	  <MauiImage Include="Resources\Images\Btn\defaultimg.svg" />
+	  <MauiImage Include="Resources\Images\Btn\notify.png" />
+	  <MauiImage Include="Resources\Images\Btn\scan.png" />
+	  <MauiImage Include="Resources\Images\Menu\community.png" />
 	  <MauiImage Include="Resources\Images\Menu\index.png" />
+	  <MauiImage Include="Resources\Images\Menu\message.png" />
+	  <MauiImage Include="Resources\Images\Menu\my.png" />
+	  <MauiImage Include="Resources\Images\Menu\report.png" />
+	  <MauiImage Include="Resources\Images\Menu\template.png" />
+	  <MauiImage Include="Resources\Images\Menu\tool.png" />
+	  <MauiImage Include="Resources\Images\Menu\type.png" />
 	</ItemGroup>
 
 </Project>
